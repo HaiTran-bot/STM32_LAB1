@@ -129,6 +129,7 @@ int main(void)
 	HAL_GPIO_WritePin(LED7_GPIO_Port, LED7_Pin, RESET);
 
     /* USER CODE BEGIN 3 */
+
   }
   /* USER CODE END 3 */
 }
