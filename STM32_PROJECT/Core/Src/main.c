@@ -63,7 +63,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	//TEST LAB1
+	//TEST LAB1 lan 2
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
