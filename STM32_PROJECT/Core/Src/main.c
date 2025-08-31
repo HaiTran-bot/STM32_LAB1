@@ -66,6 +66,19 @@ void displayLEDs(){
 		HAL_GPIO_WritePin(ports[i], pins[i], RESET);
 	}
 }
+void clearAllClock(){
+	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin,RESET);
+	HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin,RESET);
+	HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin,RESET);
+	HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin,RESET);
+	HAL_GPIO_WritePin(LED6_GPIO_Port, LED6_Pin,RESET);
+	HAL_GPIO_WritePin(LED7_GPIO_Port, LED7_Pin,RESET);
+	HAL_GPIO_WritePin(LED8_GPIO_Port, LED8_Pin,RESET);
+	HAL_GPIO_WritePin(LED9_GPIO_Port, LED9_Pin,RESET);
+	HAL_GPIO_WritePin(LED10_GPIO_Port, LED10_Pin,RESET);
+	HAL_GPIO_WritePin(LED11_GPIO_Port, LED11_Pin,RESET);
+	HAL_GPIO_WritePin(LED12_GPIO_Port, LED12_Pin, RESET);
+}
 /* USER CODE END 0 */
 
 /**
