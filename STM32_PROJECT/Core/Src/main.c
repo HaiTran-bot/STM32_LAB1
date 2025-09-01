@@ -67,6 +67,7 @@ void displayLEDs(){
 	}
 }
 void clearAllClock(){
+	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin,RESET);
 	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin,RESET);
 	HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin,RESET);
 	HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin,RESET);
