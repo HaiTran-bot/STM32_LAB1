@@ -164,6 +164,7 @@ void clearNumberOnClock(int num){
 			break;
  }
 }
+
 /* USER CODE END 0 */
 
 /**
@@ -203,7 +204,34 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  displayLEDs();
+	 clearAllClock();
+	  for (int hours = 0; hours < 12; hours++) {
+	          setNumberOnClock(hours);
+	          int prevMinute = -1;
+	          int prevSecond = -1;
+
+	          for (int minutes = 0; minutes < 60; minutes++) {
+	              int minuteLED = minutes / 5;
+	              if (minuteLED != prevMinute) {
+	                  setNumberOnClock(minuteLED);
+	                  if (prevMinute != -1 && prevMinute != hours && prevMinute != prevSecond)
+	                      clearNumberOnClock(prevMinute);
+	                  prevMinute = minuteLED;
+	              }
+
+	              for (int seconds = 0; seconds < 60; seconds++) {
+	                  int secondLED = seconds / 5;
+	                  if (secondLED != prevSecond) {
+	                      setNumberOnClock(secondLED);
+	                      if (prevSecond != -1 && prevSecond != prevMinute && prevSecond != hours)
+	                          clearNumberOnClock(prevSecond);
+	                      prevSecond = secondLED;
+	                  }
+	                  HAL_Delay(1000); // 1 giây
+	              }
+	          }
+	          clearNumberOnClock(hours);
+	    }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
