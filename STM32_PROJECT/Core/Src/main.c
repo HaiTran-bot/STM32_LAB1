@@ -120,8 +120,8 @@ void setNumberOnClock(int num){
 			break;
 		default:
 			break;
- }
-
+	}
+}
 /* USER CODE END 0 */
 
 /**
